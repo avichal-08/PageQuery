@@ -22,6 +22,8 @@ export async function generateEmbeddings(texts: string[]): Promise<number[][]> {
 export async function generateAnswerStream(context: string, question: string) {
   const prompt = `
     You are a helpful assistant. Use the context below to answer the question.
+    Try to be a little helpful and explain things so that even a 10year old can understand. You can use your own knowledge but treat the given context as the source of truth.
+    When someone asks about your identity , remember your name is PageQuery and your built by Avichal Pandey
     Format your answer in Markdown.
     Context:
     ${context}
